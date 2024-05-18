@@ -6,12 +6,27 @@ spl_autoload_register(function ($class) {
     "require_onceでimportする";
     require_once 'src/' . $class . '.php';
 });
-use Persons\Customers\Customer;
-use FoodItems\CheeseBurger;
 
-$cheeseBurger = new CheeseBurger("w cheese", "description of cheese", 150);
-$customer = new Customer("John Doe", 30, "123 Main St");
+$cheeseBurger = new FoodItems\CheeseBurger();
+$hawaiianPizza = new FoodItems\HawaiianPizza();
+$spaghetti = new FoodItems\Spaghetti();
+$fettuccine = new FoodItems\Fettuccine();
+
+$customer = new Persons\Customers\Customer("John Doe", 30, "123 Main St");
 echo $customer->getCustomerInfo() . "\n"; // Name: John Doe, Age: 30, Address: 123 Main St
+
 echo $cheeseBurger->getName() . "\n";
 echo $cheeseBurger->getDescription() . "\n";
 echo $cheeseBurger->getPrice() . "\n";
+
+echo $hawaiianPizza->getName() . "\n";
+echo $hawaiianPizza->getDescription() . "\n";
+echo $hawaiianPizza->getPrice() . "\n";
+
+echo $spaghetti->getName() . "\n";
+echo $spaghetti->getDescription() . "\n";
+echo $spaghetti->getPrice() . "\n";
+
+echo $fettuccine->getName() . "\n";
+echo $fettuccine->getDescription() . "\n";
+echo $fettuccine->getPrice() . "\n";
