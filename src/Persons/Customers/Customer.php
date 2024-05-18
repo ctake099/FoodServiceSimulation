@@ -10,6 +10,6 @@ class Customer extends Person {
     }
 
     public function getCustomerInfo(): string {
-        return "Name: {$this->name}, Age: {$this->age}, Address: {$this->address}\n";
+        return "Name: {$this->name}, Age: {$this->age}, Address: {$this->address}";
     }
 }

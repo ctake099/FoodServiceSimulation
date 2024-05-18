@@ -1,11 +1,12 @@
 <?php
 
-class FoodItem {
-    private string $name;
-    private string $description;
-    private string $price; 
+namespace FoodItems;
+abstract class FoodItem {
+    protected string $name;
+    protected string $description;
+    protected int $price; 
 
-    public function __construct(string $name, string $description, string $price) {
+    public function __construct(string $name, string $description, int $price) {
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
@@ -19,11 +20,9 @@ class FoodItem {
         return $this->description;
     }
 
-    public function getPrice(): string {
+    public function getPrice(): int {
         return $this->price;
     }
 
-    public function getCategory(): string {
-        return "food\n";
-    }
+    abstract public function getCategory(): string;
 }
